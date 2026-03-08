@@ -1,0 +1,64 @@
+<template>
+  <div id="costprice" class="costprice">
+    <div class="wrapp">
+      <div class="head">
+        <h2 class="title">Собівартість — {{ COSTPRICE.toFixed(2) }} грн</h2>
+        <p class="subtitle">Не забудьте закласти у вартість витрати на упаковку, роботу кондитера, електроенергію та амортизацію обладнання.</p>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import { mapGetters } from 'vuex'
+
+export default {
+  name: 'CostPriceCake',
+  data: () => ({}),
+  computed: {
+    ...mapGetters([
+      'COSTPRICE'
+    ]),
+  }
+}
+</script>
+
+<style scoped lang="scss">
+.costprice {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #303030;
+
+  .wrapp {
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+    
+  }
+  .head {
+    min-height: 200px;
+    background: #fff;
+    padding: 20px 15px;
+    border-radius: 15px;
+  }
+  .title {
+    margin-bottom: 10px;
+    font-size: 25px;
+
+    @include respond-to('small') {
+      font-size: 30px;
+    }
+  }
+  .subtitle {
+    font-size: 14px;
+
+    @include respond-to('small') {
+      font-size: 16px;
+    }
+  }
+
+}
+</style>
