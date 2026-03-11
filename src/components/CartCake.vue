@@ -115,7 +115,7 @@ export default {
     flex: 1 1 auto;
     flex-direction: row;
     color: #808080;
-    font-size: 14px;
+    font-size: 16px;
 
     @include respond-to('small') {
       font-size: 16px;
