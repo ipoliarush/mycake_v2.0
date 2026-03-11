@@ -184,7 +184,7 @@ export default {
     background: #fff;
     position: relative;
     border-top: 1px solid #f5f5f5;
-    font-size: 14px;
+    font-size: 16px;
 
     @include respond-to('small') {
       font-size: 16px;
